@@ -9,7 +9,8 @@ const Search = ({ className, placeholder, ...props }) => (
 )
 
 Search.defaultProps = {
-  placeholder: 'Search...'
+  placeholder: 'Search...',
+  className: ''
 }
 
 export default Search

@@ -1,0 +1,10 @@
+@import '../../theme/colors.css';
+
+.button {
+  background: var(--white);
+  cursor: pointer;
+}
+
+.button.primary {
+  background: var(--blue);
+}
