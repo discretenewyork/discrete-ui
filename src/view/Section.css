@@ -5,11 +5,12 @@
   &:first-child {
     border-top: none;
   }
-  padding: 16px 8px;
+  padding: 24px 8px;
 }
 
 .infoWrap {
   width: 256px;
+  padding-right: 16px;
   flex: 0 0 auto;
   h2 {
     font-size: 18px;
