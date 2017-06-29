@@ -1,5 +1,7 @@
-Discrete New York UI Library
-============================
+discrete-ui
+===========
+
+A custom, minimal UI library built by Discrete New York.
 
 Early stages project. this repo encapsulates the UI modules to be used on
 discretenewyork.com
