@@ -29,7 +29,4 @@
 .componentWrap {
   flex: 0 1 auto;
   width: 100%;
-  *:not(:first-child) {
-    margin: 8px;
-  }
 }
