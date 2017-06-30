@@ -3,7 +3,7 @@ import Input from 'components/Input'
 import styles from './Search.css'
 
 const Search = ({ className, placeholder, ...props }) => (
-  <div className={[styles.search, className]}>
+  <div className={[styles.search, className].join(' ')}>
     <Input placeholder={placeholder} {...props} />
   </div>
 )
