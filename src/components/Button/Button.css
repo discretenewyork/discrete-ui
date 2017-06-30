@@ -9,6 +9,7 @@
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   color: black;
+  margin: 0 8px;
   padding: 12px 24px;
   &:hover {
   	background: #555555;
