@@ -7,7 +7,7 @@ const BUILD_DIR = path.resolve('./dist')
 const NODE_MODULES = path.resolve('./node_modules')
 
 module.exports = {
-  entry: path.join(SRC_DIR, 'view/index.js'),
+  entry: path.join(SRC_DIR, 'demo/index.js'),
   output: {
     path: BUILD_DIR,
     filename: '[name].[hash:8].js',
@@ -49,7 +49,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(SRC_DIR, 'view/index.html'),
+      template: path.join(SRC_DIR, 'demo/index.html'),
       inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()

@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import styles from './ContactSheet.css'
+import React from 'react'
+import { render } from 'react-dom'
+import { Container, Input, Search, Button } from 'components'
 import Section from './Section'
-import { Input, Search, Button } from 'components'
+import '../theme/base.css';
 
-export default class ContactSheet extends Component {
-  render() {
-    return (
-      <div className={styles.contactSheet}>
-        <div className={styles.content}>
+const MOUNT_NODE = document.querySelector('#root')
+
+const DemoView = () => (
+  <div>
+    <Container style={{marginTop: 64}}>
 
           <Section
             title='Input'
@@ -31,8 +32,8 @@ export default class ContactSheet extends Component {
             <Button primary>Primary</Button>
           </Section>
 
-        </div>
-      </div>
-    )
-  }
-}
+    </Container>
+  </div>
+)
+
+render(<DemoView />, MOUNT_NODE)
