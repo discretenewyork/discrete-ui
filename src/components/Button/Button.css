@@ -1,0 +1,25 @@
+@import '../../theme/colors.css';
+
+.button {
+	background: #555555;
+	border: none;
+	outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color:white;
+  padding: 12px 24px;
+  &:hover {
+  	background: #e7e7e7;
+  	color: black;
+  }
+
+  &:active {
+  	background: #f1f442;
+  }
+}
+
+.button.primary {
+  background: var(--blue);
+}
