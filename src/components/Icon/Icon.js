@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Icon.css'
 import icons from './svg'
 
@@ -13,6 +14,14 @@ const Icon = ({ className, name, width, height, weight }) => {
       </svg>
     </i>
   )
+}
+
+Icon.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  weight: PropTypes.string
 }
 
 Icon.defaultProps = {
