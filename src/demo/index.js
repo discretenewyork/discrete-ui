@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Container, Input, Search, Button } from 'components'
+import { Container, Input, Search, Button, Icon } from 'components'
 import Section from './Section'
 import Swatch from './Swatch'
 import '../theme/base.css';
@@ -19,6 +19,26 @@ const DemoView = () => (
             <Swatch color='darkWhite' />
             <Swatch color='black' />
             <Swatch color='textColor' />
+          </Section>
+
+          <Section
+            title='Icons'
+            description='The icon component'>
+            <Icon
+              weight='regular'
+              name='arrow-right'
+              width={16}
+              height={16}/>
+            <Icon
+              weight='regular'
+              name='sync'
+              width={16}
+              height={16}/>
+            <Icon
+              weight='solid'
+              name='crown'
+              width={16}
+              height={16}/>
           </Section>
 
           <Section
