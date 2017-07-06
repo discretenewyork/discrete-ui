@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from 'components/Icon'
-import Input from 'components/Input'
+import Icon from '../Icon'
+import Input from '../Input'
 import styles from './Search.css'
 
 const Search = ({ className, placeholder, ...props }) => (

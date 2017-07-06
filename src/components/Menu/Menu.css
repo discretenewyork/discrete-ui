@@ -1,0 +1,24 @@
+@import '../../theme/variables.css';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  &.horizontal {
+    flex-direction: row;
+
+    .item {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  user-select: none;
+  margin: 0 var(--spaceUnit / 2);
+}

@@ -1,0 +1,12 @@
+@import '../../theme/variables.css';
+
+.sidebar {
+  flex: 0 1 auto;
+  width: var(--sidebarWidth);
+  padding: 20px 20px 20px 24px;
+  border-right: 1px solid var(--borderColor);
+}
+
+.sidebarContent {
+  flex: 1 1 100%;
+}
