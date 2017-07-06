@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Button.css'
 
 const Button = ({ className, children, primary, ...props }) => {
@@ -13,6 +14,20 @@ const Button = ({ className, children, primary, ...props }) => {
       {children}
     </button>
   )
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired,
+  primary: PropTypes.bool
+}
+
+Button.defaultProps = {
+  className: '',
+  primary: false
 }
 
 export default Button

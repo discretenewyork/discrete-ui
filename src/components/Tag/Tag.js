@@ -18,4 +18,15 @@ const Tag = ({ className, color, name, ...props }) => {
   )
 }
 
+Tag.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+  name: PropTypes.string.isRequired
+}
+
+Tag.defaultProps = {
+  className: '',
+  color: null
+}
+
 export default Tag

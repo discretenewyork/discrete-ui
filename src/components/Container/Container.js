@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './Container.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styles from './Container.css'
 
 const Container = ({ className, fluid, text, children, textAlign, ...props }) => {
   const classes = [
@@ -13,6 +14,24 @@ const Container = ({ className, fluid, text, children, textAlign, ...props }) =>
       {children}
     </div>
   )
+}
+
+Container.propTypes = {
+  className: PropTypes.string,
+  fluid: PropTypes.bool,
+  text: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  textAlign: PropTypes.oneOf([null, 'left', 'center', 'right'])
+}
+
+Container.defaultProps = {
+  className: '',
+  fluid: false,
+  text: false,
+  textAlign: null
 }
 
 export default Container

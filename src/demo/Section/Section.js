@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Section.css'
 
 const Section = ({ title, description, notes, children }) => (
@@ -13,5 +14,19 @@ const Section = ({ title, description, notes, children }) => (
     </div>
   </section>
 )
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired,
+  notes: PropTypes.string
+}
+
+Section.defaultProps = {
+  notes: null
+}
 
 export default Section
