@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Container, Input, Search, Button, Icon } from 'components'
+import { Container, Input, Search, Button, Icon, Tag } from 'components'
 import Section from './Section'
 import Swatch from './Swatch'
 import '../theme/base.css';
@@ -17,7 +17,7 @@ const labelStyle = {
 
 const DemoView = () => (
   <div>
-    <Container style={{marginTop: 64}}>
+    <Container style={{margin: '64px auto'}}>
 
           <Section
             title='Colors'
@@ -31,7 +31,8 @@ const DemoView = () => (
 
           <Section
             title='Icons'
-            description='An Icon component for the black tie icon set'>
+            description={`An Icon component for the black tie icon set.
+                Uses the "<i>" tag under the hood.`}>
             <p>
               <label style={labelStyle}>Light:</label>
               <Icon weight='light' name='check' width={16} height={16}/>
@@ -82,6 +83,20 @@ const DemoView = () => (
             description='A multi-purpose button component'>
             <Button>Simple</Button>
             <Button primary>Primary</Button>
+          </Section>
+
+          <Section
+            title='Tag'
+            description='The tag component represents user-defined tags (text labels)'>
+            <Tag name='Default'/>
+            <Tag name='Blue' color='blue'/>
+            <Tag name='Red' color='red'/>
+            <Tag name='Black' color='black'/>
+          </Section>
+
+          <Section
+            title='Dropdown'
+            description='A minmal dropdown component'>
           </Section>
 
     </Container>

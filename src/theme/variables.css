@@ -1,3 +1,14 @@
 :root {
   --spaceunit: 16px;
+
+  /************
+   *** Tags ***
+   ************/
+  --tagBgColor: #ffffff;
+  --tagPadding: 2px 3px 1px 6px;
+
+  /***************
+   *** Buttons ***
+   ***************/
+  /* TODO */
 }

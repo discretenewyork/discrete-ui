@@ -1,0 +1,52 @@
+@import '../../theme/colors.css';
+@import '../../theme/variables.css';
+
+@define-mixin tagLight {
+  background: var(--tagBgColor);
+  color: var(--textColor);
+  border: 1px solid color( var(--tagBgColor) b(+ 10%));
+  &:hover {
+    background: color( var(--tagBgColor) b(+ 10%) );
+    color: color( var(--tagTextColor) w(+ 10%) );
+  }
+  svg {
+    fill: var(--textColor);
+  }
+}
+
+@define-mixin tagDark {
+  background: var(--tagBgColor);
+  color: var(--white);
+  border: 1px solid color( var(--tagBgColor) w(+ 10%) );
+  &:hover {
+    opacity: 0.85;
+  }
+  svg {
+    fill: var(--white);
+  }
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 2px;
+  padding: var(--tagPadding);
+  font-size: 0.8em;
+  line-height: 1.2em;
+  cursor: pointer;
+  margin: 0 2px;
+  @mixin tagLight;
+}
+
+.tag.blue {
+  --tagBgColor: var(--blue);
+  @mixin tagDark;
+}
+
+.tag.red {
+  --tagBgColor: #FF4400;
+  @mixin tagDark;
+}
+.tag.black {
+  --tagBgColor: var(--black);
+  @mixin tagDark;
+}
