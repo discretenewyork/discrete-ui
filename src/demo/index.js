@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Container, Input, Search, Button, Icon, Tag } from 'components'
+import { Container, Input, Search, Button, Icon, Tag, Dropdown } from 'components'
 import Section from './Section'
 import Swatch from './Swatch'
 import '../theme/base.css';
@@ -96,7 +96,14 @@ const DemoView = () => (
 
           <Section
             title='Dropdown'
-            description='A minmal dropdown component'>
+            description='A minmal dropdown component'
+            notes={`Figure out how to (a) style our own icon in '::after' or whatever,
+                and (b) how to create a placeholder title?`}>
+            <Dropdown
+              options={[
+                { value: 'a', name: 'a' },
+                { value: 'b', name: 'b' }
+              ]}/>
           </Section>
 
     </Container>
