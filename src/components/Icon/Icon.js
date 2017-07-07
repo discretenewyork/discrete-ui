@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import styles from './Icon.css'
 import icons from './svg'
 
-const Icon = ({ className, name, size, weight }) => {
-  const icon = icons[`${name}-${weight}`]
+const Icon = ({ className, name, brand, size, weight }) => {
+  const icon = brand ? icons[name] : icons[`${name}-${weight}`]
+
   return (
     <i className={[styles.icon, className].join(' ')}>
       <svg width={size} height={size}>
@@ -16,6 +17,7 @@ const Icon = ({ className, name, size, weight }) => {
 
 Icon.propTypes = {
   className: PropTypes.string,
+  brand: PropTypes.bool,
   name: PropTypes.string.isRequired,
   size: PropTypes.number,
   weight: PropTypes.string
@@ -24,7 +26,8 @@ Icon.propTypes = {
 Icon.defaultProps = {
   className: '',
   weight: 'regular',
-  size: 16
+  size: 16,
+  brand: false
 }
 
 export default Icon

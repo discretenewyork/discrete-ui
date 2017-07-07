@@ -5,6 +5,7 @@ import styles from './Container.css'
 const Container = ({ className, fluid, text, children, textAlign, ...props }) => {
   const classes = [
     styles.container,
+    className,
     fluid ? styles.fluid : null,
     text ? styles.text : null,
     textAlign ? styles[`align${textAlign}`] : null

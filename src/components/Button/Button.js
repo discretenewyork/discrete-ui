@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Button.css'
 
-const Button = ({ className, children, primary, ...props }) => {
-  let cnames = [styles.button, className]
-  if (primary) cnames.push(styles.primary)
-  cnames = cnames.join(' ')
+const Button = ({ className, children, primary, size, ...props }) => {
+  let classes = [styles.button, className]
+  if (primary) classes.push(styles.primary)
+  if (size && styles[size]) classes.push(styles[size])
+  classes = classes.join(' ')
 
   return (
     <button
-      className={cnames}
+      className={classes}
       {...props}>
       {children}
     </button>
@@ -22,12 +23,17 @@ Button.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
-  primary: PropTypes.bool
+  primary: PropTypes.bool,
+  size: PropTypes.oneOf([
+    'large',
+    'small'
+  ])
 }
 
 Button.defaultProps = {
   className: '',
-  primary: false
+  primary: false,
+  size: null
 }
 
 export default Button
