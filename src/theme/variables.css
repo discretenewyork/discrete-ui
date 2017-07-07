@@ -1,10 +1,14 @@
+@import './fonts.css';
+@import './colors.css';
+
 :root {
-  --spaceunit: 16px;
+  --sizeUnit: 16px;
+  --bodyLayer: 0;
 
   /************
    *** Tags ***
    ************/
-  --tagBgColor: #ffffff;
+  --tagBgColor: var(--white);
   --tagPadding: 2px 2px 1px 6px;
 
   /***************

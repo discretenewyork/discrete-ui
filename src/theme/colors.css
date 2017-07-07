@@ -1,9 +1,23 @@
 :root {
-  --blue: #0000FF;
+  /** UI Colors **/
+  --backgroundColor: #ffffff;
+  --borderColor: rgba(255, 255, 255, 0.6);
+
+  /** Neutral Colors **/
   --white: #FAFAFA;
-  --darkWhite: #F7F7F7;
   --black: #222222;
+  --lightGrey: #e7e7e7;
+
+  /** Standard Colors **/
+  --blue: #4a3bfa;
+  --yellow: #ebfa3b;
+  --red: #fa4a3b;
+
+  /** Text Colors **/
   --textColor: #222222;
   --textInactive: #7d7d7d;
-  --lightGrey: #e7e7e7;
+
+
+  /** Color Mods **/
+  --darkWhite: #F7F7F7;
 }
