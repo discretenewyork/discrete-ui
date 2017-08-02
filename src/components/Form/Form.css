@@ -1,0 +1,17 @@
+.form {
+  input {
+    margin: 4px auto;
+  }
+}
+
+.label {
+
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: row;
+  & > * {
+    flex: 0 0 auto;
+  }
+}
