@@ -2,10 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const dist = path.resolve('./dist')
+const node_modules = path.resolve('./node_modules')
+
 module.exports = {
-  entry: 'demo/index.js',
+  entry: path.resolve('demo/index.js'),
   output: {
-    path: './dist',
+    path: dist,
     filename: '[name].[hash:8].js',
     publicPath: '/'
   },
@@ -24,12 +27,12 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: ['./node_modules'],
+    modules: [node_modules],
     extensions: ['.js']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'demo/index.html',
+      template: path.resolve('./demo/index.html'),
       inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()
@@ -37,7 +40,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 8080,
-    contentBase: './dist',
+    contentBase: dist,
     inline: true,
     hot: true,
     overlay: true,

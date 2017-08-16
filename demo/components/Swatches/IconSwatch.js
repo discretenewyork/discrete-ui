@@ -8,7 +8,7 @@ const IconLabel = styled.label`
   font-size: 0.8125em;
   min-width: 50px;
   margin-right: 0.25em;
-  color: ${color.inactive}
+  color: ${({ theme }) => theme.color.inactive};
 `
 
 const ICON_SIZE = 16

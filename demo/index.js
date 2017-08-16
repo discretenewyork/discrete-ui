@@ -1,20 +1,20 @@
 import React from 'react'
 import { render } from 'react-dom'
-import styled { ThemeProvider, injectGlobal } from 'styled-components'
+import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import theme, { globalStyle } from './theme'
-import Section from './Section'
-import { ColorSwatch, IconSwatch } from './Swatches'
+import Section from './components/Section'
+import { ColorSwatch, IconSwatch } from './components/Swatches'
 import {
   Button,
-  /*
   Container,
   Dropdown,
+  /*
   Icon,
   Input,
   Search,
   Tag
   */
-} from '../lib/components'
+} from '../lib'
 
 injectGlobal`${globalStyle}`
 
@@ -37,6 +37,23 @@ const DemoView = () => (
           <Button>Default</Button>
           <Button secondary>Secondary</Button>
           <Button danger>Danger</Button>
+          <br />
+          <br />
+          <Button secondary size='large'>Large</Button>
+          <Button secondary size='small'>small</Button>
+        </Section>
+
+        <Section
+          title='Dropdown'
+          description='A minmal dropdown component'
+          notes={`Figure out how to (a) style our own icon in '::after' or whatever,
+                  and (b) how to create a placeholder title?`}>
+          <Dropdown
+            options={[
+              { value: 'apple', name: 'apple' },
+              { value: 'banana', name: 'banana' },
+              { value: 'carrot', name: 'carrot' }
+            ]} />
         </Section>
 
         {/*
@@ -85,17 +102,6 @@ const DemoView = () => (
           <Tag name='Black' color='black' />
         </Section>
 
-        <Section
-          title='Dropdown'
-          description='A minmal dropdown component'
-          notes={`Figure out how to (a) style our own icon in '::after' or whatever,
-                  and (b) how to create a placeholder title?`}>
-          <Dropdown
-            options={[
-              { value: 'a', name: 'a' },
-              { value: 'b', name: 'b' }
-            ]} />
-        </Section>
 
 
 

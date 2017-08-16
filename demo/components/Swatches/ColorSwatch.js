@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import colors from 'lib/colors'
 
 const SWATCH_SIZE = '16px'
 
@@ -15,7 +14,7 @@ const ColorBox = styled.div`
   width: ${SWATCH_SIZE};
   height: ${SWATCH_SIZE};
   border: 1px solid #ddd;
-  background: ${props => colors[props.color]};
+  background: ${({ theme }) => theme.color[props.color]};
 `
 
 const ColorLabel = styled.label`
@@ -36,6 +35,12 @@ const Swatch = ({ color }) => (
 
 Swatch.propTypes = {
   color: PropTypes.string.isRequired
+}
+
+Swatch.defaultProps = {
+  theme: {
+    colors: {}
+  }
 }
 
 export default Swatch

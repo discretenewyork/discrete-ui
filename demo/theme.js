@@ -18,7 +18,9 @@ const theme = {
     inactive: '#7A8691',
     border: '#DCE1E6',
 
-    darkWhite: '#F3F5F6'
+    darkWhite: '#F3F5F6',
+
+    primary: '#4A3BFA'
   }
 }
 
