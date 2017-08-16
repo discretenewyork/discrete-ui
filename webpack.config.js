@@ -2,14 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const SRC_DIR = path.resolve('./src')
-const BUILD_DIR = path.resolve('./dist')
-const NODE_MODULES = path.resolve('./node_modules')
-
 module.exports = {
-  entry: path.join(SRC_DIR, 'demo/index.js'),
+  entry: 'demo/index.js',
   output: {
-    path: BUILD_DIR,
+    path: './dist',
     filename: '[name].[hash:8].js',
     publicPath: '/'
   },
@@ -22,34 +18,18 @@ module.exports = {
         options: { presets: ['es2015', 'react', 'stage-0'] }
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1, modules: true }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: { path: path.resolve('./postcss.config.js') }
-            }
-          }
-        ]
-      },
-      {
         test: /\.svg$/,
         use: ['svg-sprite-loader', 'svgo-loader']
       }
     ]
   },
   resolve: {
-    modules: [NODE_MODULES, SRC_DIR],
+    modules: ['./node_modules'],
     extensions: ['.js']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(SRC_DIR, 'demo/index.html'),
+      template: 'demo/index.html',
       inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()
@@ -57,7 +37,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 8080,
-    contentBase: BUILD_DIR,
+    contentBase: './dist',
     inline: true,
     hot: true,
     overlay: true,
