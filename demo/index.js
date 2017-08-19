@@ -10,9 +10,9 @@ import {
   Container,
   Dropdown,
   Grid,
+  Icon,
   Input,
   /*
-  Icon,
   Search,
   Tag
   */
@@ -50,8 +50,8 @@ const DemoView = () => (
           title='Input'
           description='A simple multi-use input component'>
           <p> <Input placeholder='Default' /> </p>
-          <p> <Input placeholder='With Pre' pre="@" /> </p>
-          <p> <Input placeholder='With Post' post={<Button secondary>Go</Button>} /> </p>
+          <p> <Input placeholder='Search' pre={<Icon size='0.825em' name='search' />} /> </p>
+          <p> <Input placeholder='With Button' post={<Button secondary>Go</Button>} /> </p>
         </Section>
 
         <Section
