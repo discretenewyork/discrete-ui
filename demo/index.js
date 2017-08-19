@@ -9,10 +9,10 @@ import {
   Button,
   Container,
   Dropdown,
-  Grid
+  Grid,
+  Input,
   /*
   Icon,
-  Input,
   Search,
   Tag
   */
@@ -44,6 +44,14 @@ const DemoView = () => (
           <br />
           <Button secondary size='large'>Large</Button>
           <Button secondary size='small'>small</Button>
+        </Section>
+
+        <Section
+          title='Input'
+          description='A simple multi-use input component'>
+          <p> <Input placeholder='Default' /> </p>
+          <p> <Input placeholder='With Pre' pre="@" /> </p>
+          <p> <Input placeholder='With Post' post={<Button secondary>Go</Button>} /> </p>
         </Section>
 
         <Section
@@ -88,12 +96,6 @@ const DemoView = () => (
           <ColorSwatch color='textColor' />
         </Section>
 
-
-        <Section
-          title='Input'
-          description='A simple multi-use input component'>
-          <Input placeholder='Placeholder' />
-        </Section>
 
         <Section
           title='Search'
