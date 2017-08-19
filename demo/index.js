@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
+import shortid from 'shortid'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import theme, { globalStyle } from './theme'
 import Section from './components/Section'
@@ -8,6 +9,7 @@ import {
   Button,
   Container,
   Dropdown,
+  Grid
   /*
   Icon,
   Input,
@@ -24,6 +26,7 @@ const Document = styled.div`
   left: 0;
   padding: 4em 2em;
   height: 100vh;
+  overflow-y: auto;
 `
 
 const DemoView = () => (
@@ -56,6 +59,21 @@ const DemoView = () => (
             ]} />
         </Section>
 
+        <Section
+          title='Grid'
+          description='grid'>
+          <Grid>
+            {[1,2,3,4,5,6,7,8,9].map(() => <span key={shortid.generate()} />)}
+          </Grid>
+        </Section>
+
+        <Section
+          title='Icons'
+          description={`An Icon component for the black tie icon set.
+                  Uses the "<i>" tag under the hood.`}>
+          <IconSwatch />
+        </Section>
+
         {/*
 
 
@@ -70,12 +88,6 @@ const DemoView = () => (
           <ColorSwatch color='textColor' />
         </Section>
 
-        <Section
-          title='Icons'
-          description={`An Icon component for the black tie icon set.
-                  Uses the "<i>" tag under the hood.`}>
-          <IconSwatch />
-        </Section>
 
         <Section
           title='Input'

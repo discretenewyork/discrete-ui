@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import shortid from 'shortid'
+import Icon from '../../../lib/Icon'
 
 const IconLabel = styled.label`
   display: 'inline-block';
@@ -26,16 +27,13 @@ const IconSwatch = () => (
           <Icon
             weight={weight}
             name={i}
-            key={shortid.generate()}
-            width={ICON_SIZE} />
+            key={shortid.generate()} />
         )}
       </p>
     ))}
+    <IconLabel>Spin:</IconLabel>
+    <Icon name='sync' spin />
   </div>
 )
-
-IconSwatch.propTypes = {
-  weight: PropTypes.string.isRequired
-}
 
 export default IconSwatch

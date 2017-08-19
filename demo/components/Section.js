@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const SectionWrap = styled.section`
+  max-width: 100%;
   min-height: 128px;
   display: flex;
   border-top: 1px solid #f0f0f0;
@@ -32,7 +33,7 @@ const InfoWrap = styled.div`
 
 const ComponentWrap = styled.div`
   flex: 0 1 auto;
-  width: 100%;
+  width: calc(100% - 256px);
 `
 
 const Section = ({ title, description, notes, children }) => (
