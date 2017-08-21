@@ -23,9 +23,7 @@ const theme = {
     border: '#dce1e6',
 
     darkWhite: '#f3f5f6',
-    bloomberg: '#4a3bfa',
-
-    primary: '#20272d'
+    bloomberg: '#2800d8'
   }
 }
 
