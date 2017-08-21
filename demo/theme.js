@@ -5,22 +5,27 @@ const theme = {
     mono: `'Inconsolata', 'SF Mono', 'Monaco', 'Source Code Pro', monospace;`
   },
   color: {
-    white: '#FEFEFE',
-    black: '#20272D',
-    gray: '#DCE1E6',
+    white: '#fefefe',
+    black: '#20272d',
+    gray: '#dce1e6',
 
-    blue: '#4A3BFA',
-    yellow: '#EBFA3B',
-    red: '#FA4A3B',
-    green: '#88B04B',
+    red: '#ff3b30',
+    orange: '#ff9500',
+    yellow: '#ffcc00',
+    green: '#4cd964',
+    tealBlue: '#5ac8fa',
+    blue: '#007aff',
+    purple: '#5856d6',
+    pink: '#ff2d55',
 
-    text: '#20272D',
-    inactive: '#7A8691',
-    border: '#DCE1E6',
+    text: '#20272d',
+    inactive: '#7a8691',
+    border: '#dce1e6',
 
-    darkWhite: '#F3F5F6',
+    darkWhite: '#f3f5f6',
+    bloomberg: '#4a3bfa',
 
-    primary: '#4A3BFA'
+    primary: '#20272d'
   }
 }
 
