@@ -12,6 +12,7 @@ import {
   Grid,
   Icon,
   Input,
+  Menu
   /*
   Search,
   Tag
@@ -44,6 +45,10 @@ const DemoView = () => (
           <br />
           <Button secondary size='large'>Large</Button>
           <Button secondary size='small'>small</Button>
+          <br />
+          <br />
+          <Button pre={<Icon brand name='twitter' />}>LeftAdorn</Button>
+          <Button post={<Icon brand name='instagram' />}>RightAdorn</Button>
         </Section>
 
         <Section
@@ -69,7 +74,7 @@ const DemoView = () => (
 
         <Section
           title='Grid'
-          description='grid'>
+          description='Defaults to 3 columns, auto-expands to fit parent container'>
           <Grid>
             {[1,2,3,4,5,6,7,8,9].map(() => <span key={shortid.generate()} />)}
           </Grid>
@@ -82,6 +87,17 @@ const DemoView = () => (
           <IconSwatch />
         </Section>
 
+        <Section
+          title='Menu'
+          description={`The Menu Component`}>
+          <Menu>
+            <Menu.Item><a href='#a'>one</a></Menu.Item>
+            <Menu.Item><a href='#a'>two</a></Menu.Item>
+            <Menu.Item><a href='#a'>three</a></Menu.Item>
+            <Menu.Item><a href='#a'>four</a></Menu.Item>
+            <Menu.Item><a href='#a'>five</a></Menu.Item>
+          </Menu>
+        </Section>
         {/*
 
 
