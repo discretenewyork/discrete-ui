@@ -3,8 +3,7 @@ import { render } from 'react-dom'
 import shortid from 'shortid'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import theme, { globalStyle } from './theme'
-import Section from './components/Section'
-import { ColorSwatch, IconSwatch } from './components/Swatches'
+import { Section, ColorSwatch, IconSwatch } from './components'
 import {
   Button,
   Container,
@@ -12,9 +11,8 @@ import {
   Grid,
   Icon,
   Input,
-  Menu
+  Menu,
   /*
-  Search,
   Tag
   */
 } from '../lib'
@@ -36,15 +34,32 @@ const DemoView = () => (
       <Container>
 
         <Section
+          title='Colors'
+          description='The default colors of the discrete-theme'>
+          {Object.keys(theme.color).map(c => (
+            <ColorSwatch color={c} />
+          ))}
+        </Section>
+
+        <Section
+          title='Icons'
+          description={`An Icon component for the black tie icon set.
+                  Uses the "<i>" tag under the hood.`}>
+          <IconSwatch />
+        </Section>
+
+        <Section
           title='Button'
           description='A multi-purpose button component'>
           <Button>Default</Button>
+          <Button primary>Primary</Button>
           <Button secondary>Secondary</Button>
           <Button danger>Danger</Button>
+          <Button disabled>Disabled</Button>
           <br />
           <br />
-          <Button secondary size='large'>Large</Button>
-          <Button secondary size='small'>small</Button>
+          <Button size='large'>Large</Button>
+          <Button size='small'>small</Button>
           <br />
           <br />
           <Button pre={<Icon brand name='twitter' />}>LeftAdorn</Button>
@@ -55,8 +70,16 @@ const DemoView = () => (
           title='Input'
           description='A simple multi-use input component'>
           <p> <Input placeholder='Default' /> </p>
-          <p> <Input placeholder='Search' pre={<Icon size='0.825em' name='search' />} /> </p>
-          <p> <Input placeholder='With Button' post={<Button secondary>Go</Button>} /> </p>
+          <p>
+            <Input
+              placeholder='Search'
+              pre={<Icon size='0.825em' name='search' />} />
+          </p>
+          <p>
+            <Input
+              placeholder='With Button'
+              post={<Button>Go</Button>} />
+          </p>
         </Section>
 
         <Section
@@ -81,15 +104,9 @@ const DemoView = () => (
         </Section>
 
         <Section
-          title='Icons'
-          description={`An Icon component for the black tie icon set.
-                  Uses the "<i>" tag under the hood.`}>
-          <IconSwatch />
-        </Section>
-
-        <Section
           title='Menu'
-          description={`The Menu Component`}>
+          description='Good for navigation components e.g. sidebar / navbar'>
+          <strong>Vertical:</strong>
           <Menu>
             <Menu.Item><a href='#a'>one</a></Menu.Item>
             <Menu.Item><a href='#a'>two</a></Menu.Item>
@@ -97,32 +114,18 @@ const DemoView = () => (
             <Menu.Item><a href='#a'>four</a></Menu.Item>
             <Menu.Item><a href='#a'>five</a></Menu.Item>
           </Menu>
+          <br />
+          <strong>Horizontal:</strong>
+          <Menu horizontal>
+            <Menu.Item><a href='#a'>one</a></Menu.Item>
+            <Menu.Item><a href='#a'>two</a></Menu.Item>
+            <Menu.Item><a href='#a'>three</a></Menu.Item>
+            <Menu.Item><a href='#a'>four</a></Menu.Item>
+            <Menu.Item><a href='#a'>five</a></Menu.Item>
+          </Menu>
         </Section>
+
         {/*
-
-
-
-        <Section
-          title='Colors'
-          description='A pallette of re-usable colors'>
-          <ColorSwatch color='blue' />
-          <ColorSwatch color='white' />
-          <ColorSwatch color='darkWhite' />
-          <ColorSwatch color='black' />
-          <ColorSwatch color='textColor' />
-        </Section>
-
-
-        <Section
-          title='Search'
-          description='A search component. Contains an Input component.'
-          notes={`
-            #TODO: decorate the component with an icon or something
-        `}>
-          <Search />
-        </Section>
-
-
         <Section
           title='Tag'
           description='The tag component represents user-defined tags (text labels)'>
@@ -131,12 +134,6 @@ const DemoView = () => (
           <Tag name='Red' color='red' />
           <Tag name='Black' color='black' />
         </Section>
-
-
-
-
-
-
           */}
 
       </Container>
