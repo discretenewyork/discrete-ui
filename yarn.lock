@@ -3051,9 +3051,9 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-polished@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-1.4.0.tgz#748ef6e83ac84e1257a5c9cec9ed95aeba7c0c7e"
+polished@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-1.4.1.tgz#8d805293494c3ba5726d077edb99c37ebe116d53"
 
 portfinder@^1.0.9:
   version "1.0.13"
