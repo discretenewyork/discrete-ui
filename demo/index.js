@@ -12,9 +12,7 @@ import {
   Icon,
   Input,
   Menu,
-  /*
   Tag
-  */
 } from '../lib'
 
 injectGlobal`${globalStyle}`
@@ -25,19 +23,19 @@ const Document = styled.div`
   left: 0;
   padding: 4em 2em;
   height: 100vh;
+  width: 100%;
   overflow-y: auto;
 `
 
 const DemoView = () => (
   <ThemeProvider theme={theme}>
     <Document>
-      <Container>
 
         <Section
           title='Colors'
           description='The default colors of the discrete-theme'>
           {Object.keys(theme.color).map(c => (
-            <ColorSwatch color={c} />
+            <ColorSwatch key={shortid.generate()} color={c} />
           ))}
         </Section>
 
@@ -125,18 +123,15 @@ const DemoView = () => (
           </Menu>
         </Section>
 
-        {/*
         <Section
           title='Tag'
           description='The tag component represents user-defined tags (text labels)'>
           <Tag name='Default' />
-          <Tag name='Blue' color='blue' />
-          <Tag name='Red' color='red' />
+          <Tag name='Blue'  color='blue' />
+          <Tag name='Red'   color='red' />
           <Tag name='Black' color='black' />
         </Section>
-          */}
 
-      </Container>
     </Document>
   </ThemeProvider>
 )
