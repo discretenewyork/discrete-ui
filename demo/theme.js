@@ -1,8 +1,8 @@
 const theme = {
   font: {
     url: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Yantramanav:400,700',
-    serif: `'Yantramanav', apple-system, 'Helvetica Neue', Helvetica, sans-serif;`,
-    mono: `'Inconsolata', 'SF Mono', 'Monaco', 'Source Code Pro', monospace;`
+    serif: '"Yantramanav", apple-system, "Helvetica Neue", Helvetica, sans-serif;',
+    mono: '"Inconsolata", "SF Mono", "Monaco", "Source Code Pro", monospace;'
   },
   color: {
     white: '#fefefe',
