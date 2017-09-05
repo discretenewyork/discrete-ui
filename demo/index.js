@@ -10,6 +10,7 @@ import {
   Grid,
   Icon,
   Input,
+  Loader,
   Menu,
   Tag
 } from '../lib'
@@ -130,6 +131,12 @@ const DemoView = () => (
         <Tag name='Blue' color='blue' />
         <Tag name='Red' color='red' />
         <Tag name='Black' color='black' />
+      </Section>
+
+      <Section
+        title='Loader'
+        description='A loading component that can fit in various sized boxes'>
+        <Loader height='128px' width='128px' />
       </Section>
 
     </Document>
