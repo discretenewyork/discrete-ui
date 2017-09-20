@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import shortid from 'shortid'
-import Icon from '../../lib/Icon'
+import Icon from '../../src/Icon'
 
 const IconLabel = styled.label`
   display: 'inline-block';

@@ -13,7 +13,7 @@ import {
   Loader,
   Menu,
   Tag
-} from '../lib'
+} from '../src'
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`${globalStyle}`
