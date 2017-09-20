@@ -1,16 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-const dist = path.resolve('./dist')
-const node_modules = path.resolve('./node_modules')
+const dir = require('./constants').dir
 
 module.exports = {
-  entry: path.resolve('demo/index.js'),
+  entry: path.join(dir.demo, 'index.js'),
   output: {
-    path: dist,
-    filename: '[name].[hash:8].js',
-    publicPath: '/'
+    path: dir.dist,
+    filename: 'demo.js',
   },
   module: {
     rules: [
@@ -18,7 +15,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: { presets: ['es2015', 'react', 'stage-0'] }
+        options: {
+          presets: [
+            ['env', { modules: false }],
+            'react',
+            'stage-0'
+          ]
+        }
       },
       {
         test: /\.svg$/,
@@ -27,12 +30,12 @@ module.exports = {
     ]
   },
   resolve: {
-    modules: [node_modules],
+    modules: [dir.node_modules],
     extensions: ['.js']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./demo/index.html'),
+      template: path.join(dir.demo, 'index.html'),
       inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin()
@@ -40,7 +43,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     port: 8080,
-    contentBase: dist,
+    contentBase: dir.dist,
     inline: true,
     hot: true,
     overlay: true,
