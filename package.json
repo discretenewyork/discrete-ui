@@ -4,7 +4,7 @@
   "description": "Discrete New York UI Component Kit",
   "author": "Elias Martinez Cohen <elias@discretenewyork.com>",
   "license": "MIT",
-  "main": "dist/discrete-ui.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "yarn clean && webpack --config config/webpack.config.js",
     "build:demo": "webpack --config config/webpack.demo.config.js",
