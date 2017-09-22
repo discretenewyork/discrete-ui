@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 const InputWrap = styled.div`
   position: relative;
-  padding: 1em 0.5em;
+  margin: 0.5em 0;
   input {
+    padding: 0.125em;
     outline: none;
-    max-width: 16em;
     border: none;
+    border-radius: 0;
     font-size: 0.875em;
     border-bottom: 1px solid ${props => props.theme.color.text};
     color: ${props => props.theme.color.text};
@@ -16,7 +17,6 @@ const InputWrap = styled.div`
   label {
     display: block;
     font-size: 0.75em;
-    margin-top: -0.875em;
   }
 `
 
