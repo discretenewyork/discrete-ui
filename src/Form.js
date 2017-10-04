@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import InputWrap from './Input/InputWrap.js'
 
-const Form = styled.form``
+const Form = styled.form`
+  ${InputWrap} {
+    margin: 0.5em 0;
+  }
+`
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired

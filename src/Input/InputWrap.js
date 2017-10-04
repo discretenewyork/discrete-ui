@@ -2,9 +2,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const InputWrap = styled.div`
-  position: relative;
+  width: ${props => props.width || 'auto'};
   margin: 0.5em 0;
   input {
+    width: 100%;
     padding: 0.125em;
     outline: none;
     border: none;
@@ -15,6 +16,7 @@ const InputWrap = styled.div`
     font-family: ${props => props.theme.font.mono};
   }
   label {
+    margin-top: 0.5em;
     display: block;
     font-size: 0.75em;
   }

@@ -4,12 +4,14 @@ import InputWrap from './InputWrap'
 import InputError from './InputError'
 import Adornment from './Adornment'
 
-const Input = ({ pre, post, error, label, ...props }) => (
-  <InputWrap>
+const Input = ({ pre, post, error, label, width, ...props }) => (
+  <InputWrap width={width}>
     {label ? <label>{label}</label> : null}
-    {pre ? <Adornment>{pre}</Adornment> : null}
-    <input {...props} />
-    {post ? <Adornment>{post}</Adornment> : null}
+    <div style={{ display: 'flex' }}>
+      {pre ? <Adornment>{pre}</Adornment> : null}
+      <input {...props} />
+      {post ? <Adornment>{post}</Adornment> : null}
+    </div>
     {error && props.value.length > 0 ?
       <InputError>{error}</InputError> : null}
   </InputWrap>
