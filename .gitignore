@@ -2,5 +2,4 @@ node_modules/
 Session.vim
 blacktie/
 blacktie-brands/
-dist/demo.js
-dist/index.html
+dist/
