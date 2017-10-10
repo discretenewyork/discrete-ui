@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "polished": "1.x",
-    "prop-types": "16.x",
+    "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x",
     "shortid": "2.x",
