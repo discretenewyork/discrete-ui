@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: dir.dist,
     filename: 'discrete-ui.js',
-    library: 'discreteUI'
+    libraryTarget: 'commonjs'
   },
   module: {
     rules: [
@@ -27,7 +27,15 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['svg-sprite-loader', 'svgo-loader']
+        use: [
+          { loader: 'svg-sprite-loader' },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [ { removeXMLNS: true } ]
+            }
+          }
+        ]
       }
     ]
   },
