@@ -4,7 +4,8 @@ import InputWrap from './Input/InputWrap.js'
 
 const Form = styled.form`
   ${InputWrap} {
-    margin: 0.5em 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 `
 
