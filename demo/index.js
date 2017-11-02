@@ -79,6 +79,23 @@ const DemoView = () => (
             placeholder='With Button'
             post={<Button>Go</Button>} />
         </p>
+        <p>
+          <Input
+            label='TextInput'
+            placeholder='With Label' />
+        </p>
+        <p>
+          <Input
+            label='Required TextInput'
+            required
+            placeholder='Required Label' />
+        </p>
+        <p>
+          <Input
+            label='Masked Input'
+            placeholder='+1 (212) 555-5555'
+            mask='+1 (999) 999-9999' />
+        </p>
       </Section>
 
       <Section
