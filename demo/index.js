@@ -7,6 +7,7 @@ import { Section, ColorSwatch, IconSwatch } from './components'
 import {
   Button,
   Dropdown,
+  Form,
   Grid,
   Icon,
   Input,
@@ -95,6 +96,12 @@ const DemoView = () => (
             label='Masked Input'
             placeholder='+1 (212) 555-5555'
             mask='+1 (999) 999-9999' />
+        </p>
+        <p>
+          <Form.Group>
+            <Input label='Grouped Input 1' />
+            <Input label='Grouped Input 2' />
+          </Form.Group>
         </p>
       </Section>
 

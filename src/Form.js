@@ -17,6 +17,7 @@ Form.Group = styled.div`
   flex-direction: row;
   & > * {
     flex: 0 0 auto;
+    margin-right: 0.75em;
   }
 `
 
