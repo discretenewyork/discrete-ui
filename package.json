@@ -34,10 +34,10 @@
   },
   "peerDependencies": {
     "polished": "1.x",
-    "prop-types": ">=15.x <17",
-    "react": "16.x",
-    "react-dom": "16.x",
-    "shortid": "2.x",
-    "styled-components": "2.x"
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "shortid": "^2.2.8",
+    "styled-components": "^2.2.1"
   }
 }
