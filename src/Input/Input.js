@@ -15,7 +15,10 @@ const Input = ({ pre, post, error, label, width, ...props }) => (
         {label}
       </InputLabel>
     ) : null}
-    <span style={{ display: 'flex' }}>
+    <span style={{
+      display: 'flex',
+      marginTop: label ? 0 : '1em' //make up for space lost without label
+    }}>
       {pre ? <Adornment>{pre}</Adornment> : null}
       { props.mask ? (
         <MaskedInput {...props} />

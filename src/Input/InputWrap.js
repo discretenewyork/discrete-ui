@@ -6,7 +6,7 @@ const inputFontSize = 0.8
 const InputWrap = styled.span`
   display: block;
   width: ${props => props.width || 'auto'};
-  margin: 0.5em 0;
+  margin: 0;
   input {
     width: 100%;
     padding: 0 0.5em;

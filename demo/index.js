@@ -123,6 +123,18 @@ const DemoView = () => (
             { value: 'banana', name: 'banana' },
             { value: 'carrot', name: 'carrot' }
           ]} />
+        <p>
+          <Form.Group>
+            <Dropdown
+              title='Grouped'
+              options={[
+                { value: 'apple', name: 'apple' },
+                { value: 'banana', name: 'banana' },
+                { value: 'carrot', name: 'carrot' }
+              ]} />
+            <Input label='with Input' />
+          </Form.Group>
+        </p>
       </Section>
 
       <Section
