@@ -8,19 +8,19 @@ const Select = styled.select`
   appearance: none;
   outline: none;
   background: none;
-  border: none;
+  border: 1px solid ${({ theme }) => theme.color.text};
   border-radius: 0;
-  border-bottom: 1px solid ${({ theme }) => theme.color.text};
   font-family: ${({ theme }) => theme.font.mono};
   color: ${({ theme }) => theme.color.text};
-  font-size: 0.825em;
-  padding: 0.328em calc(1em + 10px) 0.328em 1em;
+  font-size: 0.8em;
+  padding: 0 calc(0.5em + 10px) 0 0.5em;
+  line-height: 2.4em;
 `
 
 const Arrow = styled.span`
   pointer-events: none;
   font-size: 0.825em;
-  margin-left: -10px;
+  margin-left: -15px;
 `
 
 const Dropdown = ({ title, options, ...props }) => (
