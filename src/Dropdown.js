@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Label from './Input/InputLabel'
 
 const Select = styled.select`
   cursor: pointer;
@@ -24,6 +25,7 @@ const Arrow = styled.span`
 
 const Dropdown = ({ title, options, ...props }) => (
   <div>
+    <Label>{title}</Label>
     <Select {...props}>
       {options.map(o => (
         <option key={o.value} value={o.value}>
