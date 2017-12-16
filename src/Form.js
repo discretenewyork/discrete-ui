@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import InputWrap from './Input/InputWrap.js'
 
 const Form = styled.form`
-  ${InputWrap} {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
 `
 
 Form.propTypes = {
