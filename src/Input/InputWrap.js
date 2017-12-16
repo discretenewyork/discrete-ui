@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+const inputFontSize = 0.8
+
 const InputWrap = styled.span`
   display: block;
   width: ${props => props.width || 'auto'};
   margin: 0.5em 0;
   input {
     width: 100%;
-    padding: 0.125em;
+    padding: 0 0.5em;
     outline: none;
-    border: none;
+    border: 1px solid ${props => props.theme.color.text};
     border-radius: 0;
-    font-size: 0.875em;
-    border-bottom: 1px solid ${props => props.theme.color.text};
+    font-size: ${inputFontSize}em;
+    line-height: ${inputFontSize * 3}em;
     color: ${props => props.theme.color.text};
     font-family: ${props => props.theme.font.mono};
   }

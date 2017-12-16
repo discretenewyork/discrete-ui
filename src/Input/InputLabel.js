@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Label = styled.label`
-  margin-top: 0.5em;
-  font-size: 0.85em;
+  display: block;
+  margin: 1.5em 0 0.2em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bold;
   &::after {
     content: ${props => props.required ? '"*"' : ''};
     color: ${props => props.theme.color.red};

@@ -40,7 +40,7 @@ Input.defaultProps = {
   post: null,
   label: null,
   error: null,
-  value: ''
+  value: undefined
 }
 
 export default Input
