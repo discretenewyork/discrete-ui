@@ -99,7 +99,7 @@ const DemoView = () => (
         </p>
         <p>
           <Form.Group>
-            <Input label='Grouped Input 1' />
+            <Input label='FormGroup Input 1' />
             <Input label='Grouped Input 2' />
           </Form.Group>
         </p>
@@ -111,6 +111,13 @@ const DemoView = () => (
         notes={`Figure out how to (a) style our own icon in '::after' or whatever,
                 and (b) how to create a placeholder title?`}>
         <Dropdown
+          options={[
+            { value: 'apple', name: 'apple' },
+            { value: 'banana', name: 'banana' },
+            { value: 'carrot', name: 'carrot' }
+          ]} />
+        <Dropdown
+          title={'With Title'}
           options={[
             { value: 'apple', name: 'apple' },
             { value: 'banana', name: 'banana' },
