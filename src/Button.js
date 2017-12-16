@@ -23,6 +23,11 @@ const buttonFontSize = ({ size }) => {
   }
 }
 
+const buttonBorderColor = (props) => {
+  if (props.secondary) return props.theme.color.text
+  return buttonBgColor(props)
+}
+
 const buttonPadding = ({ size }) => {
   switch (size) {
     case 'large':
@@ -63,7 +68,7 @@ const Button = styled.button`
 
   color: ${buttonFgColor};
   background: ${buttonBgColor};
-  border: 1px solid ${buttonBgColor};
+  border: 1px solid ${buttonBorderColor};
   svg {
     fill: ${buttonFgColor};
   }
