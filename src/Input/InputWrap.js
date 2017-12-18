@@ -4,14 +4,14 @@ import styled from 'styled-components'
 const inputFontSize = 0.8
 
 const InputWrap = styled.span`
-  display: block;
-  width: ${props => props.width || 'auto'};
-  margin: 0;
+  display: flex;
+  margin-top: ${props => props.label ? 0 : '1em'};
+  border: 1px solid ${props => props.theme.color.text};
   input {
     width: 100%;
     padding: 0 0.5em;
     outline: none;
-    border: 1px solid ${props => props.theme.color.text};
+    border: none;
     border-radius: 0;
     font-size: ${inputFontSize}em;
     line-height: ${inputFontSize * 3}em;

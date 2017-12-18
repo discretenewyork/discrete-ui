@@ -9,10 +9,10 @@ const Adornment = styled.span`
   color: ${props => props.theme.color.text};
   font-family: ${props => props.theme.font.mono};
   &:first-child {
-    padding-right: 0.25em;
+    margin-left: 0.5em;
   }
   &:last-child {
-    padding-left: 0.25em;
+    margin-right: 0.25em;
   }
 `
 

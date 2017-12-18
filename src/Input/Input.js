@@ -9,25 +9,22 @@ import Label from './InputLabel'
 
 
 const Input = ({ pre, post, error, label, width, ...props }) => (
-  <InputWrap width={width}>
+  <div style={{ width }}>
     {label ? (
       <InputLabel required={props.required}>
         {label}
       </InputLabel>
     ) : null}
-    <span style={{
-      display: 'flex',
-      marginTop: label ? 0 : '1em' //make up for space lost without label
-    }}>
+    <InputWrap label={label}>
       {pre ? <Adornment>{pre}</Adornment> : null}
       { props.mask ? (
         <MaskedInput {...props} />
       ) : (<input {...props} />)}
       {post ? <Adornment>{post}</Adornment> : null}
-    </span>
+    </InputWrap>
     {error && props.value.length > 0 ?
       <InputError>{error}</InputError> : null}
-  </InputWrap>
+  </div>
 )
 
 Input.propTypes = {
