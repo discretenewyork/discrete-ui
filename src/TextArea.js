@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import Label from './Input/InputLabel'
 
 const TextArea = styled.textarea`
   display: block;
@@ -37,4 +38,9 @@ TextArea.defaultProps = {
   }
 }
 
-export default TextArea
+export default ({ label, ...props }) => (
+  <div>
+    {label ? <Label>{label}</Label> : null }
+    <TextArea {...props} />
+  </div>
+)
