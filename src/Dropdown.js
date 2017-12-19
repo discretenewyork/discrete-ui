@@ -7,7 +7,7 @@ const Select = styled.select`
   cursor: pointer;
   appearance: none;
   outline: none;
-  background: none;
+  background: ${({ theme }) => theme.color.white};
   border: 1px solid ${({ theme }) => theme.color.text};
   border-radius: 0;
   font-family: ${({ theme }) => theme.font.mono};
