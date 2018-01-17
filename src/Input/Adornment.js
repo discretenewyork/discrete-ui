@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const Adornment = styled.span`
   position: relative;
   display: flex;
-  align-items: center;
   font-size: 0.825em;
   color: ${props => props.theme.color.text};
   font-family: ${props => props.theme.font.mono};

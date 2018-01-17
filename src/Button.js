@@ -1,31 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { lighten } from 'polished'
 
-const buttonBgColor = ({ primary, secondary, danger, disabled, theme }) => {
-  if (primary) return theme.color.blue
-  if (secondary) return theme.color.white
-  if (danger) return theme.color.red
+const buttonBgColor = ({ disabled, theme }) => {
   if (disabled) return theme.color.gray
-  return theme.color.text
+  return theme.color.white
 }
 
-const buttonFgColor = ({ secondary, theme }) => {
-  if (secondary) return theme.color.text
-  return theme.color.white
+const buttonHoverColor = (props) => {
+  if (props.disabled)
+  const { primary, secondary, danger, theme } = props
+  let amount = 0.8
+  if (primary || secondary) amount = 0.44
+  else if (danger) amount = 0.36
+  return lighten(amount, buttonFgColor(props))
+}
+
+const buttonFgColor = ({ primary, secondary, danger, disabled, theme }) => {
+  if (primary) return theme.color.blue
+  if (secondary) return theme.color.darkGray
+  if (danger) return theme.color.red
+  if (disabled) return theme.color.white
+  return theme.color.text
 }
 
 const buttonFontSize = ({ size }) => {
   switch (size) {
-    case 'large': return '0.9em'
-    case 'small': return '0.618em'
+    case 'large': return '1em'
+    case 'small': return '0.75em'
     default: return '0.825em'
   }
 }
 
 const buttonBorderColor = (props) => {
-  if (props.secondary) return props.theme.color.text
-  return buttonBgColor(props)
+  if (props.disabled)
+    return buttonBgColor(props)
+  return buttonFgColor(props)
 }
 
 const buttonPadding = ({ size }) => {
@@ -53,8 +64,8 @@ const buttonWidth = ({ size }) => {
 const Button = styled.button`
   outline: none;
   border: none;
-  margin: 0 0.5em;
-  border-radius: 10em;
+  margin: 0.1875em 0.5em;
+  border-radius: 2px;
   font-weight: 400;
   letter-spacing: 0.25px;
   cursor: ${({ disabled }) => {
@@ -72,13 +83,11 @@ const Button = styled.button`
   svg {
     fill: ${buttonFgColor};
   }
+
   &:hover {
-    color: ${buttonBgColor};
-    background: ${buttonFgColor};
-    svg {
-      fill: ${buttonBgColor};
-    }
+    background: ${buttonHoverColor};
   }
+
   &:active {
     color: ${buttonFgColor};
     background: ${buttonBgColor};
