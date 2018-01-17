@@ -1,13 +1,30 @@
 const theme = {
   font: {
-    url: 'https://fonts.googleapis.com/css?family=Cousine:400,700|Yantramanav:400,700',
-    serif: '"Yantramanav", sans-serif;',
-    mono: '"Cousine", monospace;'
+    sans: [
+      '-apple-system',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Helvetica',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol";'
+    ].join(', '),
+    mono: [
+      '"Inconsolata"',
+      '"SF Mono"',
+      '"Monaco"',
+      '"Source Code Pro"',
+      'monospace;'
+    ].join(', ')
   },
   color: {
     white: '#fefefe',
     black: '#20272d',
     gray: '#dce1e6',
+    darkGray: '#7a8691',
 
     red: '#ff3b30',
     orange: '#ff9500',
@@ -20,7 +37,8 @@ const theme = {
 
     text: '#20272d',
     inactive: '#7a8691',
-    border: '#dce1e6',
+    border: '#20272d',
+    lightBorder: '#dfdfdf',
 
     darkWhite: '#f3f5f6',
     bloomberg: '#2800d8'
@@ -36,7 +54,7 @@ export const globalStyle = `
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-family: ${theme.font.serif};
+    font-family: ${theme.font.sans};
     color: ${theme.color.text};
   }
 
