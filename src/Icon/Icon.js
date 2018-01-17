@@ -5,11 +5,16 @@ import icons from './svg'
 
 const IconWrap = styled.i`
   display: inline-flex;
+  align-items: center;
 `
 
 const Svg = styled.svg`
   width: ${props => props.size};
   height: ${props => props.size};
+  ${props => (props.lowered ? `
+    position: relative;
+    top: 0.1875em;
+  ` : '')}
 `
 
 Svg.defaultProps = {
@@ -29,13 +34,13 @@ const SpinningSvg = styled(Svg)`
   animation: ${spinAnimation} 1s infinite linear;
 `
 
-const Icon = ({ name, brand, size, weight, spin }) => {
+const Icon = ({ name, brand, size, weight, spin, lowered }) => {
   const icon = brand ? icons[name] : icons[`${name}-${weight}`]
   const Graphic = spin ? SpinningSvg : Svg
 
   return (
     <IconWrap>
-      <Graphic size={size}>
+      <Graphic lowered={lowered} size={size}>
         { icon ? <use xlinkHref={`#${icon.id}`} /> : null }
       </Graphic>
     </IconWrap>
@@ -50,7 +55,8 @@ Icon.propTypes = {
     PropTypes.number
   ]),
   weight: PropTypes.string,
-  spin: PropTypes.bool
+  spin: PropTypes.bool,
+  lowered: PropTypes.bool
 }
 
 Icon.defaultProps = {
@@ -58,7 +64,8 @@ Icon.defaultProps = {
   weight: 'regular',
   size: '1em',
   brand: false,
-  spin: false
+  spin: false,
+  lowered: false
 }
 
 export default Icon

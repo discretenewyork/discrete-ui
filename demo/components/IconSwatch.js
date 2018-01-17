@@ -23,6 +23,7 @@ const IconSwatch = () => (
         </IconLabel>
         {TEST_ICONS.map(i => (
           <Icon
+            lowered
             weight={weight}
             name={i}
             key={shortid.generate()} />
@@ -30,7 +31,7 @@ const IconSwatch = () => (
       </p>
     ))}
     <IconLabel>Spin:</IconLabel>
-    <Icon name='sync' spin />
+    <Icon lowered name='sync' spin />
   </div>
 )
 
