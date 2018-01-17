@@ -7,8 +7,9 @@ const InputWrap = styled.span`
   display: flex;
   margin-top: ${props => props.label ? 0 : '1em'};
   border: 1px solid ${props => props.theme.color.text};
-  background: ${({ theme }) => theme.color.white}
+  background: ${({ theme }) => theme.color.white};
   input {
+    display: block;
     width: 100%;
     padding: 0 0.5em;
     outline: none;
