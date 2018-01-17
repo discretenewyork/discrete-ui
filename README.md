@@ -9,14 +9,16 @@ discretenewyork.com
 Installation
 ------------
 
-Clone or download this repo. `cd` into the project directory and run:
+Clone or download this repo. Note that the blacktie icons are not included in
+version control. You'll have to download and install those icons yourself.
+
+`cd` into the project directory and run:
 
     $ yarn install
     [ allow installation to complete ]
     $ npm start
 
 The "Demo" view should open at localhost:8080.
-
 
 Usage
 ------
