@@ -8,7 +8,7 @@ import Adornment from './Adornment'
 import Label from './InputLabel'
 
 
-const Input = ({ pre, post, error, label, width, ...props }) => (
+const Input = ({ pre, post, error, label, width, inputRef, ...props }) => (
   <div style={{ width }}>
     {label ? (
       <InputLabel required={props.required}>
@@ -19,7 +19,7 @@ const Input = ({ pre, post, error, label, width, ...props }) => (
       {pre ? <Adornment>{pre}</Adornment> : null}
       { props.mask ? (
         <MaskedInput {...props} />
-      ) : (<input {...props} />)}
+      ) : (<input ref={inputRef} {...props} />)}
       {post ? <Adornment>{post}</Adornment> : null}
     </InputWrap>
     {error && props.value.length > 0 ?
@@ -32,7 +32,8 @@ Input.propTypes = {
   post: PropTypes.node,
   label: PropTypes.string,
   error: PropTypes.string,
-  value: PropTypes.string
+  value: PropTypes.string,
+  inputRef: PropTypes.func
 }
 
 Input.defaultProps = {
@@ -40,7 +41,8 @@ Input.defaultProps = {
   post: null,
   label: null,
   error: null,
-  value: undefined
+  value: undefined,
+  inputRef: undefined
 }
 
 export default Input
