@@ -10,18 +10,21 @@ const buttonBgColor = ({ disabled, theme }) => {
 
 const buttonHoverColor = (props) => {
   if (props.disabled) return lighten(0.04, buttonBgColor(props))
-  const { primary, secondary, danger, theme } = props
+  const { primary, secondary, danger, success, theme } = props
   let amount = 0.8
-  if (primary || secondary) amount = 0.44
+  if (primary || secondary || success) amount = 0.44
   else if (danger) amount = 0.36
   return lighten(amount, buttonFgColor(props))
 }
 
-const buttonFgColor = ({ primary, secondary, danger, disabled, theme }) => {
+const buttonFgColor = ({
+  primary, secondary, danger, success, disabled, theme
+}) => {
+  if (disabled) return theme.color.white
   if (primary) return theme.color.blue
   if (secondary) return theme.color.darkGray
+  if (success) return theme.color.green
   if (danger) return theme.color.red
-  if (disabled) return theme.color.white
   return theme.color.text
 }
 
