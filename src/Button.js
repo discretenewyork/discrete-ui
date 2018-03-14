@@ -161,7 +161,7 @@ Adornment.defaultProps = {
 
 const ButtonWrap = ({ pre, post, children, onClick, ...props }) => {
   if (pre || post) return (
-    <Button {...props}>
+    <Button onClick={onClick} {...props}>
       {pre ?
         <Adornment
           left
