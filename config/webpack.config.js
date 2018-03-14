@@ -52,6 +52,5 @@ module.exports = {
     })
   ],
   externals: Object.keys(peerDependencies),
-  devtool: 'source-map',
   target: 'web'
 }
