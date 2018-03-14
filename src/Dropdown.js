@@ -25,7 +25,7 @@ const Arrow = styled.span`
 
 const Dropdown = ({ title, options, ...props }) => (
   <div>
-    <Label>{title}</Label>
+    {title ? <Label>{title}</Label> : null}
     <Select {...props}>
       {options.map(o => (
         <option key={o.value} value={o.value}>
