@@ -1,11 +1,11 @@
 const path = require('path')
-const root = path.resolve(__dirname, '..')
-const dir = {
-  root,
-  dist: path.join(root, 'dist'),
-  src:  path.join(root, 'src'),
-  demo: path.join(root, 'demo'),
-  node_modules: path.join(root, 'node_modules')
-}
 
-module.exports = { dir }
+const root = path.resolve(__dirname, '..')
+
+module.exports = {
+  ROOT: root,
+  DIST: path.join(root, 'dist'),
+  SRC: path.join(root, 'src'),
+  DEMO: path.join(root, 'demo'),
+  NODE_MODULES: path.join(root, 'node_modules')
+}

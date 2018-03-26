@@ -40,8 +40,11 @@ const Icon = ({ name, brand, size, weight, spin, lowered }) => {
 
   return (
     <IconWrap>
-      <Graphic lowered={lowered} size={size}>
-        { icon ? <use xlinkHref={`#${icon.id}`} /> : null }
+      <Graphic
+        viewBox={icon ? icon.viewBox : null}
+        lowered={lowered}
+        size={size}>
+        { icon ? <use xlinkHref={`./${icon.url}`} /> : null }
       </Graphic>
     </IconWrap>
   )
