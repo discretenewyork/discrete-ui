@@ -14,7 +14,7 @@ version control. You'll have to download and install those icons yourself.
 
 `cd` into the project directory and run:
 
-    $ yarn install
+    $ npm install
     [ allow installation to complete ]
     $ npm start
 
@@ -32,9 +32,12 @@ project's dependencies in your own, because you require directly from the source
 
 When making changes, you have to build the project & then re-install in whatever project you are using it in.
 
-Install the package with npm by pointing directly to the package path:
+Build the package first, then install in your project by pointing to the built package path:
 
-    $ npm i --save path/to/discrete-ui
+    $ cd /path/to/discrete-ui/
+    $ npm run build
+    $ cd /path/to/myProject
+    $ npm i --save /path/to/discrete-ui
 
 The SVG sprite is extracted from the rest of the bundle, but in usage the relative path to the SVG file
 is in the module directory, not that of the application build.
