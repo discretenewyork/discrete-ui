@@ -51,4 +51,4 @@ To fix this use CopyWebpackPlugin:
     }])
 
 With the dev server you also have to force the dev server to write the file to the filesystem.
-Use write-file-webpack-plugin for this. Simply include `new WriteFilePlugin()` in the plugin list.
+Use `write-file-webpack-plugin` for this. Simply include `new WriteFilePlugin()` in the plugin list.
