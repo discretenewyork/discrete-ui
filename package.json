@@ -9,7 +9,8 @@
     "build": "npm run clean && webpack --config config/prod.js",
     "build:demo": "webpack --config config/demo.js",
     "clean": "rm -rf dist/",
-    "start": "webpack-dev-server --hot --config config/demo.js",
+    "start": "npm run demo",
+    "demo": "webpack-dev-server --hot --config config/demo.js",
     "lint": "eslint src/"
   },
   "repository": "git+https://github.com/discretenewyork/discrete-ui.git",

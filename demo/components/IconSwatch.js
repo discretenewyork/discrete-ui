@@ -11,7 +11,7 @@ const IconLabel = styled.label`
   color: ${({ theme }) => theme.color.inactive};
 `
 
-const TEST_ICONS = ['check', 'times', 'arrow-right', 'trash']
+const TEST_ICONS = ['check', 'times', 'arrow-right', 'trash', 'angle-left']
 const WEIGHTS = ['light', 'regular', 'bold', 'solid']
 
 const IconSwatch = () => (
