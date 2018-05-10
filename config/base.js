@@ -32,7 +32,12 @@ module.exports = {
           {
             loader: 'svgo-loader',
             options: {
-              plugins: [{ removeXMLNS: true }]
+              plugins: [
+                { removeXMLNS: true },
+                { convertPathData: true },
+                { convertShapeToPath: true },
+                { mergePaths: true }
+              ]
             }
           }
         ]
@@ -40,7 +45,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new SpritePlugin()
+    new SpritePlugin({ plainSprite: true })
   ],
   resolve: {
     modules: [NODE_MODULES],

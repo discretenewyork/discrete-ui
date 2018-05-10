@@ -37,14 +37,13 @@ const SpinningSvg = styled(Svg)`
 const Icon = ({ name, brand, size, weight, spin, lowered }) => {
   const icon = brand ? icons[name] : icons[`${name}-${weight}`]
   const Graphic = spin ? SpinningSvg : Svg
-
   return (
     <IconWrap>
       <Graphic
         viewBox={icon ? icon.viewBox : null}
         lowered={lowered}
         size={size}>
-        { icon ? <use xlinkHref={`./${icon.url}`} /> : null }
+        { icon ? <use xlinkHref={`/${icon.url}`} /> : null }
       </Graphic>
     </IconWrap>
   )
