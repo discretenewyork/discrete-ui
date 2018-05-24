@@ -6,6 +6,7 @@ import theme, { globalStyle } from './theme'
 import { Section, ColorSwatch, IconSwatch } from './components'
 import {
   Button,
+  Checkbox,
   Dropdown,
   Form,
   Grid,
@@ -136,6 +137,14 @@ const DemoView = () => (
             <Input label='with Input' />
           </Form.Group>
         </p>
+      </Section>
+
+      <Section
+        title='Checkbox'
+        description='A controlled checkbox input that can be indeterminate'>
+        <Checkbox checked />
+        <Checkbox indeterminate />
+        <Checkbox />
       </Section>
 
       <Section

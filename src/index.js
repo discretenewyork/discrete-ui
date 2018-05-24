@@ -1,4 +1,5 @@
 export Button from './Button'
+export Checkbox from './Checkbox'
 export Container from './Container'
 export Dropdown from './Dropdown'
 export Form from './Form'
